@@ -1,0 +1,20 @@
+{
+  "name": "midi-mapper",
+  "version": "1.0.0",
+  "description": "Local MIDI beat mapping, orchestration and transposition backend (TypeScript + Node + SQLite)",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node --experimental-sqlite --experimental-transform-types --no-warnings src/server.ts",
+    "demo": "node --experimental-sqlite --experimental-transform-types --no-warnings bin/demo.ts",
+    "stop": "node --experimental-transform-types --no-warnings bin/stop.ts",
+    "test": "node --experimental-sqlite --experimental-transform-types --no-warnings --test --test-reporter=spec \"test/*.test.ts\"",
+    "cli": "node --experimental-sqlite --experimental-transform-types --no-warnings src/cli.ts"
+  },
+  "bin": {
+    "midi-mapper": "src/cli.ts"
+  },
+  "license": "MIT"
+}
