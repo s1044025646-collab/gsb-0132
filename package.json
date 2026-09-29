@@ -1,0 +1,17 @@
+{
+  "name": "midi-beat-mapper",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Local MIDI beat mapping, orchestration and transposition backend (API + CLI + tests, no UI/audio/hardware).",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "demo": "node --experimental-sqlite src/demo.ts",
+    "start": "node --experimental-sqlite src/api.ts",
+    "cli": "node --experimental-sqlite src/cli.ts",
+    "test": "node --experimental-sqlite --disable-warning=ExperimentalWarning --test --test-reporter=spec test/*.test.ts",
+    "clean": "node --experimental-sqlite scripts/clean.ts"
+  }
+}
